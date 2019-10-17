@@ -14,7 +14,7 @@ nltk.download('punkt')
 Base = declarative_base()
 
 class Property(Base):
-	__tablename__ = 'properties'
+	__tablename__ = 'mineral_county'
 	id = Column(Integer, primary_key=True)
 	tax_id = Column(String(16))
 	leased = Column(Boolean)
@@ -41,6 +41,7 @@ for page in range(pages):
 	pageObj = pdfReader.getPage(page)
 	text += pageObj.extractText()
 	print(page)
+
 
 matches = re.findall('[0-9]{3,7}', text)
 tokens = nltk.word_tokenize(text)

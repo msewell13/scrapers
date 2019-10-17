@@ -2,7 +2,7 @@
 
 This application will pull down all of the delinquent tax parcels within Mineral County Montana.
 
-app.py parses a pdf of every single parcel within the county and uses that to extract a tax id number and saves it to a sqlite database.
+app.py parses a pdf of every single parcel within the county and uses that to extract a tax id number and saves it to a mysql database. it will import lots of numbers that will not be accurate tax id numbers but we will eliminate those with scraper.py.
 
 scraper.py will read the tax id numbers in the sqlite database retrieved from app.py and use it to check if they are delinquent or not. Please note that the tax years will need to be updated as time passes on. Also, if the county updates their website it will break this software and will need to be re-written.
 

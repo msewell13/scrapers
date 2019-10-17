@@ -13,7 +13,7 @@ import os
 Base = declarative_base()
 
 class Property(Base):
-	__tablename__ = 'properties'
+	__tablename__ = 'mineral_county'
 	id = Column(Integer, primary_key=True)
 	tax_id = Column(String)
 	leased = Column(Boolean)
@@ -76,6 +76,5 @@ records = p.map(property, session.query(Property))
 p.terminate()
 p.join()
 session.close()
-
 
 
