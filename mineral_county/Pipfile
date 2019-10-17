@@ -11,7 +11,8 @@ beautifulsoup4 = "*"
 sqlalchemy = "==1.3.0b1"
 pypdf2 = "*"
 nltk = "*"
-pymysql = "*"
+pymysql = {version = "*", extras = ["rsa"]}
+"bs4" = "*"
 
 [requires]
 python_version = "3.7"
